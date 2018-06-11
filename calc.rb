@@ -8,3 +8,22 @@ end
 	puts "[add], [multiply], [subtract] ?"
 	repsonse = gets.chomp
 
+case repsonse
+
+when 'add'
+  puts "Enter values"
+  operator = :+
+
+ when "multiply"
+ 	puts "Enter values"
+ 	operator = :*
+
+ when "subtract"
+ 	puts "Enter values"
+ 	operator = :-
+ else
+ 	puts "Invalid Operator!"
+ 	exit
+ end
+
+
