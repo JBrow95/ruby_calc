@@ -4,3 +4,7 @@ def get_v(n)	#function that calls var n
 		gets.chomp.to_i
 	}
 end
+
+	puts "[add], [multiply], [subtract] ?"
+	repsonse = gets.chomp
+
