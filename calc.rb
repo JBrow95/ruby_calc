@@ -1,38 +1,49 @@
-
-def get_v(n)
-	n.times.map.with_index { |n| 
-		puts "Enter Value #{ 1 + n }"
-		gets.chomp.to_i
-	}
-end
-
+def resp1()
 	puts "[add], [multiply], [subtract], [divide] ?"
 
-repsonse = gets.chomp
+	response = gets.chomp
+		if response == "divide"
+			resp2()
+		end
 
-case repsonse
- when 'add'
-  puts "Enter 2 values you want to add"
-  operator = :+
+	case response
+	 when 'add'
+  		puts "Enter 2 values you want to add"
+  		n1 = gets.chomp
+ 		n2 = gets.chomp
+ 		ntotal = n1.to_i + n2.to_i
+ 		puts "Your answer is #{ntotal}"
 
- when "multiply"
- 	puts "Enter 2 values you want to multiply"
- 	operator = :*
+ 	when "multiply"
+	 	puts "Enter 2 values you want to multiply"
+	 	n1 = gets.chomp
+	    n2 = gets.chomp
+	    ntotal = n1.to_i * n2.to_i
+	    puts "Your answer is #{ntotal}"
 
- when "subtract"
- 	puts "Enter 2 values you want to subtract"
- 	operator = :-
-
- when "divide"
- 	puts "Enter 2 values you want to divide"
- 	operator = :/ 
-
- when "exit"
- 	puts "Goodbye"
- 	exit
+	when "subtract"
+	 	puts "Enter 2 values you want to subtract"
+	 	n1 = gets.chomp
+	    n2 = gets.chomp
+	    ntotal = n1.to_i - n2.to_i
+	    puts "Your answer is #{ntotal}"
+	end
 end
 
-	puts "How many values would you like to use?"
-	nov = gets.to_i
 
+def resp2()
 
+	puts "what 2 numbers do you want to divide?"
+		num1 = gets.chomp
+		num2 = gets.chomp
+	
+	if num2.to_i == 0 or num1.to_i == 0
+		puts "Can't Divide by Zero"
+	else 
+		numtotal = num1.to_i / num2.to_i
+		puts "Your answer is #{answer}"
+	end
+	resp1()
+end
+
+resp1()
