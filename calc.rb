@@ -6,7 +6,7 @@ def resp1()
 			resp2()
 		end
 
-	case response
+	case response.downcase
 	 when 'add'
   		puts "Enter 2 values you want to add"
   		n1 = gets.chomp
@@ -37,11 +37,11 @@ def resp2()
 		num1 = gets.chomp
 		num2 = gets.chomp
 	
-	if num2.to_i == 0 or num1.to_i == 0
+	if num2.to_i == 0 
 		puts "Can't Divide by Zero"
 	else 
 		numtotal = num1.to_i / num2.to_i
-		puts "Your answer is #{answer}"
+		puts "Your answer is #{numtotal}"
 	end
 	resp1()
 end
